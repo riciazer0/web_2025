@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 숫자입력 </h1>
+    <div>
+        <input id= "inp-num" type="number"/>
+        <button id="btn-ok"> ok </button>
+    </div>
+    <p id="output"> 선택한 번호 : </p>
+    <script>
+        var inpNum = document.getElementById("inp-num")
+        var btnOk = document.getElementById("btn-ok")
+
+        btnOk.addEventListener('click', ()=> {
+            console.log("선택한 번호는" + inpNum.value + "입니다.")
+
+        })
+    </script> 
+</body>
+</html>
