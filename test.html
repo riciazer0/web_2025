@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="count_o">Counter : 0</h1>
+    <button id="inc">증가</button>
+    <button id="dec">감소</button>
+    <button id="reset"> 리셋 </button>
+
+    <script>
+        var Count_out = document.getElementById("count_o")
+        var btn_Inc = document.getElementById("inc")
+        var btn_Dec = document.getElementById("dec")
+        var btn_Re = document.getElementById("reset")
+        counter = 0;
+
+        btn_Inc.addEventListener('click', ()=>{
+            counter = counter + 1
+            Count_out.innerText= "counter : " + counter
+        })
+        btn_Dec.addEventListener('click', ()=>{
+            counter = counter - 1
+            Count_out.innerText= "counter : " + counter
+        })
+        btn_Re.addEventListener('click', ()=>{
+            counter = 0
+            Count_out.innerText= "counter : " + counter
+        })
+    </script>
+</body>
+</html>
