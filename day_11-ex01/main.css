@@ -49,3 +49,8 @@ body{
     justify-content: flex-end;   /* 오른쪽 정렬 */
     align-items: flex-start;     /* 위쪽 정렬 */
 }
+
+/* frame 안에 들어가는 코드(이 방법으로 했어야했다? 할 수 있다?)
+     position: absolute;
+    (위치): (값)px'
+*/
