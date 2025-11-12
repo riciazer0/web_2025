@@ -30,7 +30,7 @@ body{
 }
 
 .small-text{
-    font-size: 15px
+    font-size: 25px
 }
 
 .frame{
@@ -40,14 +40,20 @@ body{
 
 .frame2 {
     display: flex;
-    justify-content: flex-start; /* 왼쪽 정렬 */
-    align-items: flex-end;       /* 아래쪽 정렬 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 .frame3 {
     display: flex;
-    justify-content: flex-end;   /* 오른쪽 정렬 */
-    align-items: flex-start;     /* 위쪽 정렬 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 /* frame 안에 들어가는 코드(이 방법으로 했어야했다? 할 수 있다?)
