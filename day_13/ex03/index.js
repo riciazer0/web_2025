@@ -5,19 +5,25 @@ export default async function main(){
     //const newGame = document.querySelector('')
     const creditScreen = document.querySelector('#credit-screen')
     let currentScreen = "main_menu"
+    const optionScreen = document.querySelector('#option-screen')
 
 
     let currentIndex = 0;
     const menuitems = document.querySelectorAll(".menu-item");
+    const optionitems = document.querySelectorAll(".option-item");
+    let currentIndex2 = 0;
 
 
     console.log(menuitems.length)
     const menuitems_count = menuitems.length
+    const option_count = optionitems.length
 
     menuitems[currentIndex].classList.add("select")
+    optionitems[currentIndex2].classList.add("select")    
 
     document.addEventListener("keydown", (e) => {
         menuitems[currentIndex].classList.remove('select')
+        optionitems[currentIndex2].classList.remove('select')        
 
         if(currentScreen == "main_menu"){
 
@@ -42,6 +48,12 @@ export default async function main(){
                     creditScreen.classList.remove('hide')
                     currentScreen = "creditScreen"
                 }
+                else if(select_action == 'Option'){
+                    main_menu.classList.add('hide')
+                    creditScreen.classList.add('hide')
+                    optionScreen.classList.remove('hide')
+                    currentScreen = "optionScreen"
+                }
             }
                 console.log(currentIndex)
                  menuitems[currentIndex].classList.add('select')
@@ -57,9 +69,27 @@ export default async function main(){
             }
 
         }
-        
-    
-
+        else if(currentScreen == "optionScreen"){
+            console.log(e.key)
+            if(e.key == "ArrowUp"){
+                currentIndex2--
+                if(currentIndex2 < 0){
+                    currentIndex2 = option_count-1
+                }
+            }
+            else if(e.key == "ArrowDown"){
+                currentIndex2++
+                currentIndex2 %= option_count
+            }            
+            if(e.key == "Enter"){
+                optionScreen.classList.add('hide')
+                    creditScreen.classList.add('hide')                
+                main_menu.classList.remove('hide')
+                currentScreen="main_menu"
+            }
+            console.log(currentIndex2)  
+            optionitems[currentIndex2].classList.add('select')
+        }
 
     })
 

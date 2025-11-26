@@ -59,3 +59,7 @@ footer {
 .hide{
     display: none;
 }
+
+.option-item{
+    font-size: 35px;
+}
