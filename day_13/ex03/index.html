@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day11 ex01</title>
+    <style>
+        @import url('./main.css');
+    </style>
+</head>
+<body>
+
+    <header>
+        <div> version 1.0 </div>
+    </header>
+    <main id="main-menu">
+    <div class="title">Dugeon & Dragons</div>
+    <div class="menu-item" data-action="New">New</div>    
+    <div class="menu-item" data-action="Load"> Load</div>    
+    <div class="menu-item" data-action="Option">Option</div>   
+    <div class="menu-item" data-action="credit"> Credit </div>
+    </main>
+
+    <main id= "credit-screen" class="hide">
+        <div class="credit-title"> Credits </div>
+        <div class="credit-item"> Game Design: </div>
+        <div class="credit-item"> Programmging: </div>
+        <div class="credit-item"> Art: </div>
+        <div class="back-button"> Back to Main </div>
+    </main>
+
+    <main id="option-screen" class="hide">
+        <div class="option-item"> 소리 설정 </div>
+        <div class="option-item"> 배경 설정 </div>        
+        <div class="option-item"> 화질 설정 </div>        
+        <div class="option-item"> 조작 키 설정 </div>        
+    </main>
+
+    <footer>
+        <div>copywrite 12298</div>
+    </footer>
+
+
+
+
+    <script type="module">
+        import main from './index.js'
+        main();
+    </script>
+</body>
+</html>
