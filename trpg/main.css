@@ -16,6 +16,12 @@ body{
     font-weight: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'DosGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
 
 header {
     display: flex;
@@ -30,6 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'DosGothic';
 
 }
 
