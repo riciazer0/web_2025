@@ -516,3 +516,5 @@ export default async function main(){
 
 
         }
+
+        /* 가능한 선에서 최대한 더 작업해보기(시나리오 작성해서 최대한 구현시도하기)*/
