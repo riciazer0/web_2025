@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day11 ex01</title>
+    <style>
+        @import url('./main.css');
+    </style>
+</head>
+<body id="theme" class="theme">
+
+    <header>
+        <div> version 1.2.2 </div>
+    </header>
+    
+    <main id="main-menu">
+    <div class="title">coc7th trpg</div>
+    <div class="menu-item" data-action="New">New</div>    
+    <div class="menu-item" data-action="Load"> Load</div>    
+    <div class="menu-item" data-action="Option">Option</div>   
+    </main>
+
+    <main id="option-screen" class="hide"> 
+        <div class="option-item" data-action="theme">테마설정</div>
+        <div class="option-item" data-action="credit"> Credit </div>
+        <div class="option-item" data-action="back"> 돌아가기 </div>
+    </main>
+
+    <main id="set-theme" class="hide font">
+        원하는 테마를 선택하세요.
+        <div class="theme-item font" data-action="white"> 1 </div>
+        <div class="theme-item font" data-action="black"> 2 </div>
+        <div class="theme-item font" data-action="mint"> 3 </div>
+        <div class="theme-item font" data-action="back"> 돌아가기 </div>
+    </main>
+
+
+    <main id= "credit-screen" class="hide">
+        <div class="credit-title font"> Credits </div>
+        <div class="credit-item font"> Game Design: 김유경</div>
+        <div class="credit-item font"> Programmging: 김유경 </div>
+        <div class="back-button font"> Back to Main </div>
+    </main>
+
+    <main id="start-screen" class="hide">
+        <div class="start-item" data-action="make-cha"> 캐릭터 생성 </div>
+        <div class="start-item" data-action="select-sc"> 시나리오 선택 </div>
+        <div class="start-item" data-action="back"> 돌아가기 </div>
+    </main>
+
+    <main id="make-char" class="hide">
+          <div class="container">
+            <div class="profile-info">
+                <h2>사용자 프로필</h2>
+                <div> <p>이름: <span id="name">-</span> </p>   
+                    <input type="text" id="name_set" placeholder="이름을 입력하세요">
+                    <button id = ro01 class = dice>확인</button>
+                </div>
+
+                <div> <p id="gender">성별:
+                    <select id="gender" name="gender">
+                        <option value="male">남성</option>
+                        <option value="female">여성</option>
+                        <option value="other">기타</option>
+                    </select>
+                    </p>
+                </div>
+
+                <div> <p>나이: <span id="age">-</span> </p>
+                    <input type="number" id="age_set" placeholder="나이를 입력하세요" min="0">
+                    <button id = ro0 class = dice>확인</button>
+                </div>
+
+                <div> <p>체력: <span id="health">-</span></p>
+                    <button id = ro02 class = dice>확인</button>
+                </div>
+
+                <p>이성: <span id="san">-</span></p>                                 
+                <p>마력: <span id="mana">-</span></p> 
+                <p>소지품: <span id="inven">-</span></p>                   
+                <p>직업:
+                    <select id="job" name="work">
+                        <option value="none">직업을 선택하세요</option>
+                        <option value="tea">교수</option>
+                        <option value="jo">기자</option>
+                        <option value="enj">엔지니어</option>
+                        <option value="pol">형사</option>
+                        <option value="ven">변호사</option>
+                        <option value="dec">사립탐정</option>
+                        <option value="doc">의사</option>
+                        <option value="other">기타</option>
+                    </select>                    
+                </p>
+            </div>
+
+            <div class="profile-stats">
+                <h2>사용자 특성치</h2>
+                <div class="box">
+                    <p>근력: <span id="str">-</span></p>
+                    <button id = ro1 class = dice>roll</button>
+                </div>
+                <span id="str1">-</span>
+
+                <div class="box">
+                    <p>민첩성: <span id="spe">-</span></p>
+                    <button id = ro2 class = dice>roll</button>
+                </div>
+                <span id="spe1">-</span>      
+
+                <div class="box">
+                    <p>지능: <span id="int">-</span></p>
+                    <button id = ro3 class = dice>roll</button>
+                </div>
+                <span id="int1">-</span>
+
+                <div class="box">
+                    <p>건강: <span id="heal">-</span></p>
+                    <button id = ro4 class = dice>roll</button>
+                </div>
+                <span id="heal1">-</span>
+
+                <div class="box">
+                    <p>외모: <span id="bea">-</span></p>
+                    <button id = ro5 class = dice>roll</button>
+                </div>
+                <span id="bea1">-</span>
+
+                <div class="box">
+                    <p>정신력: <span id="sin">-</span></p>
+                    <button id = ro6 class = dice>roll</button>
+                </div>
+                <span id="sin1">-</span>
+
+                <div class="box">
+                    <p>크기 : <span id="size">-</span></p>  
+                    <button id = ro7 class = dice>roll</button>
+                </div>
+                <span id="size1">-</span>
+
+                <div class="box">
+                    <p>교육: <span id="edu">-</span></p>
+                    <button id = ro8 class = dice>roll</button>
+                </div>             
+                <span id="edu1">-</span>
+
+                <div class="box">
+                    <p>운: <span id="luck">-</span></p>  
+                    <button id = ro10 class = dice>roll</button>                     
+                </div>
+
+                <div class="box">
+                    <p>이동력: <span id="move">-</span></p> 
+                    <button id = ro9 class = dice>확인</button>
+                </div>                                                                                             
+                                                                                                                                                               
+            </div>   
+        </div>
+                <div class="container3">
+                    <button id="save" class="button2">저장</button>
+                        <button id="back_but" class="button2">돌아가기</button>                    
+                </div>
+
+
+    </main>
+
+    <main id="tutorial" class="hide">
+        <p></p>
+        <p></p>
+    </main>
+
+    <footer>
+        <div id="tuto" class="hide">
+            <button>trpg&coc란?</button>
+        </div>
+    </footer>
+
+
+
+
+    <script type="module">
+        import main from './index.js'
+        main();
+    </script>
+</body>
+</html>
