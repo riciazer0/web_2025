@@ -11,6 +11,7 @@ export default async function main(){
     let container = document.querySelector(".container")
     const startScreen = document.querySelector('#start-screen')
     const chaScreen = document.querySelector('#make-char')
+    const screScreen = document.querySelector("select-scre")
 
     /*아이템(커서?)를 위한 정의*/
     let currentIndex = 0; /*타이틀*/
@@ -22,7 +23,8 @@ export default async function main(){
     const startitems = document.querySelectorAll(".start-item");
     const themeitems = document.querySelectorAll(".theme-item");
     const tutorial = document.querySelector('#tuto')
-
+    const tutori = document.querySelector(".tuto")
+   
 
     /* 길이 정의(커서 이동)*/
     console.log(menuitems.length)
@@ -60,7 +62,6 @@ export default async function main(){
             else if(e.key == "Enter"){
                 console.log(menuitems[currentIndex].dataset.action)    
                 const select_action = menuitems[currentIndex].dataset.action
-                tutorial.classList.add("hide")
 
                 if(select_action == 'Option'){
                     main_menu.classList.add('hide')
@@ -77,7 +78,6 @@ export default async function main(){
                 console.log(currentIndex)
                  menuitems[currentIndex].classList.add("select")
         }
-        
         /*옵션창*/
         else if(currentScreen == 'optionScreen'){
             console.log(e.key)
@@ -111,7 +111,6 @@ export default async function main(){
                 else if(select_action2 == "back"){
                     main_menu.classList.remove('hide')
                     optionScreen.classList.add('hide')
-                    tutorial.classList.remove("hide")
                     currentScreen = "main_menu"
                 }
             }
@@ -127,7 +126,6 @@ export default async function main(){
                 creditScreen.classList.add('hide')
                 main_menu.classList.remove('hide')
                 currentScreen = "main_menu"
-                tutorial.classList.remove("hide")
             }
 
         }
@@ -198,13 +196,13 @@ export default async function main(){
                     currentScreen = "chaScreen"
                 }
                 else if(select_action3 == 'selec-sc'){
-                    startScreen.classList.remove('hide')
-                    /*currentScreen = "   Screen"*/
+                    startScreen.classList.add('hide')
+                    screScreen.classList.remove('hide')
+                    currentScreen = "screScreen"
                 }                
                 else if (select_action3 == 'back'){
                     startScreen.classList.add('hide')
                     main_menu.classList.remove('hide')
-                    tutorial.classList.remove("hide")
                     currentScreen = "main_menu"
                 }                  
             }
@@ -513,7 +511,11 @@ export default async function main(){
                 document.getElementById('health').textContent = health / 10;
             });
 
-
+        
+        document.getElementById('tuto').addEventListener('click', function(){
+                 tutori.classList.remove('hide')                
+        });
+            
 
         }
 
